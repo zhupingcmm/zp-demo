@@ -26,14 +26,8 @@ export function todo(value) {
     return (dispatch)=>{
         return fetch('http://localhost:5000/api/todo',{
             method:'get',
-            // headers: { 'Content-Type': 'application/json' },
         }).then((res)=>{
-            // console.log(res);
             return res.json();
-            // dispatch({
-            //     type: ActionTypes.GET_TODO,
-            //     response:res
-            // })
         }).then((json)=>{
             dispatch({
                 type: ActionTypes.GET_TODO,

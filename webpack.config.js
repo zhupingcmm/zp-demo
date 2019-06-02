@@ -12,6 +12,7 @@ module.exports={
     devServer: {
         port:4000,
         open:true,
+        historyApiFallback: true,
         proxy:{
             '/api/todo':'http://localhost:5000/'
         }
